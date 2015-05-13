@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\HDL\VGA_practica\top_module_VGA.ncd
+OUTFILE=C:\HDL\VGA_practica\top_module_VGA.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=C:\HDL\VGA_practica
+LICENSE=WebPack
+USER_INFO=210995790_0_0_076

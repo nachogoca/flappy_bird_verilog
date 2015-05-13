@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj VGA_practica -o C:/HDL/VGA_practica/counter_with_comparison.tfi -lib work C:/HDL/VGA_practica//counter_with_comparison.v -module counter_with_comparison -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

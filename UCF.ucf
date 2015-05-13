@@ -1,0 +1,92 @@
+#### Entradas
+
+# Pin assignment for push buton switch. 
+# Suelto =>0  oprimido => 1
+# "botones"
+NET "jump" LOC = "G12";	#bt0, el de la derecha
+#NET "Btn[1]" LOC = "C11";	#bt1
+#NET "Btn[2]" LOC = "M4";	#bt2
+NET "rst_asyn_la" LOC = "A7";	#bt3, el de la izquierda
+
+# Pin assignment for SWs 
+# Abajo = 0 Arriba =1
+NET "enable" LOC ="P11";	# sw0, el de la derecha
+#NET "switches[1]" LOC ="L3";	# sw1
+#NET "switches[2]" LOC ="K3";	# sw2
+#NET "switches[3]" LOC ="B4";	# sw3
+#NET "switches[4]" LOC ="G3";	# sw4
+#NET "switches[5]" LOC ="F3";	# sw5
+#NET "switches[6]" LOC ="E2";	# sw6
+NET "pausa" LOC ="N3";	# sw7, el de la izquierda
+
+#### Salidas
+
+# Pin assignment for Transistors. Para encenderlo con un 0
+#NET "trans[0]" LOC = "F12"; 	# Transistor 0, el de la derecha
+#NET "trans[1]" LOC = "J12"; 	# Transistor 1
+#NET "trans[2]" LOC = "M13"; 	# Transistor 2
+#NET "trans[3]" LOC = "K14"; 	# Transistor 3, el de la izquierda
+
+# Pin assignment for Segments. Para encenderlo con un 0
+# NOTA: Como casi siempre el nombre de las variables 
+# Corresponde al de los segmentos
+#NET "seg[6]" LOC = "L14";	# segmento a
+#NET "seg[5]" LOC = "H12";	# segmento b
+#NET "seg[4]" LOC = "N14";	# segmento c
+#NET "seg[3]" LOC = "N11";	# segmento d
+#NET "seg[2]" LOC = "P12";	# segmento e
+#NET "seg[1]" LOC = "L13";	# segmento f
+#NET "seg[0]" LOC = "M12";	# segmento g
+#NET "key_ready" LOC = "N13";	# punto decimal "dp"
+# Pin assignment for LEDs. 
+# Para encenderlo requiere un 1
+#NET "A_op" LOC ="M5";	 # L0, el de la derecha
+#NET "B_op" LOC ="M11"; 	 # L1
+#NET "boton_op" LOC ="P7";	 # L2
+#NET "leds[3]" LOC ="P6";	 # L3
+#NET "leds[4]" LOC ="N5";	 # L4
+#NET "leds[5]" LOC ="N4";	 # L5
+#NET "leds[6]" LOC ="P4";	 # L6
+#NET "leds[7]" LOC ="G1"; 	 # L7, el de la izquierda
+
+# En los 4 conectores (JA,JB, JC y JD), la terminal 5 es tierra y la 6 es Vcc 
+# Son bidireccionales, es decir, cada una de las 16 líneas se puede usar como entrada o salida.
+# Si la terminal es usada como salida hay que quitar " | PULLUP " y dejar " | DRIVE = 2 "
+# Si la terminal es usada como entrada hay que quitar " | DRIVE = 2 " y dejar " | PULLUP "
+#
+#NET "tx" LOC = "B2" | DRIVE = 2;  # JA terminal 1, está arriba de SW7Conector JA 
+#NET "rx" LOC = "A3" | PULLUP ;  # JA terminal 2
+#NET "" LOC = "J3" | DRIVE = 2 | PULLUP ;  # JA terminal 3
+#NET "" LOC = "B5" | DRIVE = 2 | PULLUP ;  # JA terminal 4, está junto a la terminal JA-5, la de tierra 
+ 
+#NET "rx" LOC = "C6"| PULLUP ;  # JB  1, está arriba de SW4
+#NET "" LOC = "B6" | DRIVE = 2 | PULLUP ;  #·JB  2
+#NET "" LOC = "C5" | DRIVE = 2 | PULLUP ;  # JB  3
+#NET "" LOC = "B7" | DRIVE = 2 | PULLUP ;  # JB  4, está junto a la terminal JB-5, la de tierra#
+
+###Jc
+#NET "f[3]" LOC = "A9"  | PULLUP ; # JC  1 
+#NET "f[2]" LOC = "B9"  | PULLUP ; # JC  2 
+#NET "f[1]" LOC = "A10" | PULLUP ; # JC  3 
+#NET "f[0]" LOC = "C9"  | PULLUP ; # JC  4 
+#JD
+#NET "" LOC = "C12" | DRIVE = 2; # JD 1
+#NET "boton" LOC = "C12" | PULLUP; # JD 2
+#NET "B" LOC = "C13" | PULLUP; # JD 3
+#NET "A" LOC = "D12" | PULLUP; # JD 4
+
+NET "clk_50mhz" LOC = "B8"; # Bank = 0, Signal name = MCLK reloj interno
+NET "clk_50mhz" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Pin assignment for VGA
+NET "h_sync"   LOC = "J14"  | DRIVE = 2 ;
+NET "v_sync"   LOC = "K13"  | DRIVE = 2 ;
+
+NET "rgb[0]"  LOC = "F13"  | DRIVE = 2  ; //red
+NET "rgb[1]"  LOC = "D13"  | DRIVE = 2  ; //RED
+NET "rgb[2]"  LOC = "C14"  | DRIVE = 2  ; // RED
+NET "rgb[3]"  LOC = "G14"  | DRIVE = 2  ;// GREEN
+NET "rgb[4]"  LOC = "G13"  | DRIVE = 2  ;//GREEN
+NET "rgb[5]"  LOC = "F14"  | DRIVE = 2  ;//GREEN
+NET "rgb[6]"  LOC = "J13"  | DRIVE = 2  ;//BLUE
+NET "rgb[7]"  LOC = "H13"  | DRIVE = 2  ;//BLUE

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/HDL/VGA_practica/tb_random_isim_beh.exe" -prj "C:/HDL/VGA_practica/tb_random_beh.prj" "work.tb_random" "work.glbl" 

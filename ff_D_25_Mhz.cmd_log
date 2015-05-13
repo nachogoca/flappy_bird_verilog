@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj VGA_practica -o C:/HDL/VGA_practica/ff_D_25_Mhz.tfi -lib work C:/HDL/VGA_practica//ff_D_25_Mhz.v -module ff_D_25_Mhz -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

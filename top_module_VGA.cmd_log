@@ -1,0 +1,1 @@
+xst -intstyle ise -filter "C:/HDL/VGA_practica/iseconfig/filter.filter" -ifn "C:/HDL/VGA_practica/top_module_VGA.xst" -ofn "C:/HDL/VGA_practica/top_module_VGA.syr" 
